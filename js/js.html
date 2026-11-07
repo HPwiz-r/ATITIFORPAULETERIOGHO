@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Architecture & Interactive Code | Atitifor Paul E.</title>
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* 
+        ==========================================================================
+        ATITIFOR PAUL E. - JAVASCRIPT ARCHITECTURE & INTERACTIVE SCRIPTS
+        ==========================================================================
+        Niches Covered:
+        1. Executive & Administrative Support (Interactive Task Handlers)
+        2. Higher Education Administration (Academic Filtering & Governance Modals)
+        3. Customer Success & Support Management (HubSpot/Intercom Form Handlers)
+        4. International Travel Advisory (Itinerary & Documentation Status Checkers)
+        ==========================================================================
+        */
+
+        :root {
+            --bg-dark: #0A192F;
+            --bg-card: #112240;
+            --bg-light: #1D2D50;
+            --accent-gold: #D4AF37;
+            --gold-light: #F4E07B;
+            --gold-gradient: linear-gradient(135deg, #D4AF37 0%, #F59E0B 100%);
+            --text-main: #F8FAFC;
+            --text-muted: #94A3B8;
+            --border-color: rgba(212, 175, 55, 0.2);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .brand-font {
+            font-family: 'Cinzel', serif;
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(10, 25, 47, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            padding: 1.2rem 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--accent-gold);
+        }
+
+        .cta-btn {
+            background: var(--gold-gradient);
+            color: var(--bg-dark);
+            padding: 0.6rem 1.4rem;
+            border-radius: 4px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .mobile-toggle {
+            display: none;
+            color: var(--accent-gold);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* --- Page Header --- */
+        .page-header {
+            padding: 10rem 2rem 4rem;
+            text-align: center;
+            background: radial-gradient(circle at center, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+        }
+
+        .page-header h1 {
+            font-size: 2.8rem;
+            color: var(--text-main);
+            margin-bottom: 1rem;
+        }
+
+        .page-header h1 span {
+            color: var(--accent-gold);
+        }
+
+        .page-header p {
+            color: var(--text-muted);
+            max-width: 650px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        /* --- JavaScript Section Documentation --- */
+        .js-doc-section {
+            padding: 2rem 2rem 6rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .doc-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .doc-card h2 {
+            color: var(--accent-gold);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        /* Code Display Box */
+        .code-snippet {
+            background: #060D1A;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 1.5rem;
+            overflow-x: auto;
+            color: #94A3B8;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            white-space: pre-wrap;
+        }
+
+        .code-snippet .keyword { color: #F4E07B; font-weight: bold; }
+        .code-snippet .function { color: #60A5FA; }
+        .code-snippet .string { color: #34D399; }
+        .code-snippet .comment { color: #64748B; font-style: italic; }
+
+        /* Interactive Live Test Widget */
+        .interactive-widget {
+            background: var(--bg-light);
+            border: 1px solid var(--accent-gold);
+            border-radius: 6px;
+            padding: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .interactive-widget h3 {
+            color: var(--text-main);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .widget-controls {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .widget-btn {
+            background: var(--accent-gold);
+            color: var(--bg-dark);
+            border: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .widget-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+        }
+
+        .widget-output {
+            background: var(--bg-dark);
+            border: 1px solid var(--border-color);
+            padding: 1rem;
+            border-radius: 4px;
+            color: var(--gold-light);
+            font-family: monospace;
+            font-size: 0.9rem;
+            min-height: 50px;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: #060D1A;
+            border-top: 1px solid var(--border-color);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .footer-logo {
+            font-size: 1.4rem;
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .social-links a {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .copyright {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* --- Mobile Navigation Drawer --- */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                width: 75%;
+                height: calc(100vh - 70px);
+                background: var(--bg-card);
+                flex-direction: column;
+                padding: 2rem;
+                transition: var(--transition);
+                border-left: 1px solid var(--border-color);
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">ATITIFOR PAUL E.</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="contact.html" class="cta-btn">Get in Touch</a>
+            <div class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>JavaScript Architecture & <span>Interactive Scripts</span></h1>
+        <p>Explore the functional scripts powering mobile navigation drawers, dynamic project filtering, modal overlays, and automated service inquiry dispatchers.</p>
+    </section>
+
+    <!-- JavaScript Documentation Section -->
+    <section class="js-doc-section">
+        
+        <!-- Script 1: Mobile Navbar Drawer Toggle -->
+        <div class="doc-card">
+            <h2><i class="fas fa-bars"></i> 1. Mobile Navigation Drawer Handler</h2>
+            <p style="color: var(--text-muted); margin-bottom: 1rem;">Toggles mobile responsive slide-out drawer menus across all pages seamlessly.</p>
+            
+            <div class="code-snippet">
+<span class="comment">// Mobile Navigation Drawer Toggle</span>
+<span class="keyword">const</span> mobileToggle = <span class="function">document.getElementById</span>(<span class="string">'mobileToggle'</span>);
+<span class="keyword">const</span> navLinks = <span class="function">document.getElementById</span>(<span class="string">'navLinks'</span>);
+
+mobileToggle.<span class="function">addEventListener</span>(<span class="string">'click'</span>, () => {
+    navLinks.classList.<span class="function">toggle</span>(<span class="string">'active'</span>);
+});
+            </div>
+        </div>
+
+        <!-- Script 2: Portfolio Filtering Logic -->
+        <div class="doc-card">
+            <h2><i class="fas fa-filter"></i> 2. Portfolio Category Filter Engine</h2>
+            <p style="color: var(--text-muted); margin-bottom: 1rem;">Filters portfolio items dynamically between Higher Education, CRM & Support, Travel Advisory, and Event Logistics[cite: 2, 3].</p>
+            
+            <div class="code-snippet">
+<span class="comment">// Category Filter Functionality</span>
+<span class="keyword">const</span> filterBtns = <span class="function">document.querySelectorAll</span>(<span class="string">'.filter-btn'</span>);
+<span class="keyword">const</span> portfolioCards = <span class="function">document.querySelectorAll</span>(<span class="string">'.portfolio-card'</span>);
+
+filterBtns.<span class="function">forEach</span>(btn => {
+    btn.<span class="function">addEventListener</span>(<span class="string">'click'</span>, () => {
+        filterBtns.<span class="function">forEach</span>(b => b.classList.<span class="function">remove</span>(<span class="string">'active'</span>));
+        btn.classList.<span class="function">add</span>(<span class="string">'active'</span>);
+
+        <span class="keyword">const</span> filter = btn.<span class="function">getAttribute</span>(<span class="string">'data-filter'</span>);
+
+        portfolioCards.<span class="function">forEach</span>(card => {
+            <span class="keyword">if</span> (filter === <span class="string">'all'</span> || card.<span class="function">getAttribute</span>(<span class="string">'data-category'</span>) === filter) {
+                card.style.display = <span class="string">'flex'</span>;
+            } <span class="keyword">else</span> {
+                card.style.display = <span class="string">'none'</span>;
+            }
+        });
+    });
+});
+            </div>
+        </div>
+
+        <!-- Script 3: Modal Case Study Controller -->
+        <div class="doc-card">
+            <h2><i class="fas fa-window-maximize"></i> 3. Case Study Modal Overlay Controller</h2>
+            <p style="color: var(--text-muted); margin-bottom: 1rem;">Manages popup overlays for detailed executive case studies, preventing background body scrolling when active.</p>
+            
+            <div class="code-snippet">
+<span class="comment">// Modal Open / Close Handlers</span>
+<span class="keyword">function</span> <span class="function">openModal</span>(modalId) {
+    <span class="function">document.getElementById</span>(modalId).classList.<span class="function">add</span>(<span class="string">'active'</span>);
+    document.body.style.overflow = <span class="string">'hidden'</span>;
+}
+
+<span class="keyword">function</span> <span class="function">closeModal</span>(modalId) {
+    <span class="function">document.getElementById</span>(modalId).classList.<span class="function">remove</span>(<span class="string">'active'</span>);
+    document.body.style.overflow = <span class="string">'auto'</span>;
+}
+            </div>
+
+            <!-- Interactive Live Test Widget -->
+            <div class="interactive-widget">
+                <h3><i class="fas fa-play-circle"></i> Live Simulation Widget</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">Test the simulated execution handler for inquiry tracking or status updates.</p>
+                <div class="widget-controls">
+                    <button class="widget-btn" onclick="testWorkflow('Executive Support')">Simulate Executive Task</button>
+                    <button class="widget-btn" onclick="testWorkflow('Travel Advisory')">Simulate Visa Verification</button>
+                </div>
+                <div class="widget-output" id="widgetOutput">Click a button above to run simulation snippet...</div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <a href="index.html" class="footer-logo">ATITIFOR PAUL E.</a>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fas fa-globe"></i></a>
+                <a href="mailto:Directorhp4@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p class="copyright">&copy; 2026 Atitifor Paul E. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Execution Handlers -->
+    <script>
+        // Mobile Navigation Drawer Toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Interactive Simulation Test Function
+        function testWorkflow(type) {
+            const output = document.getElementById('widgetOutput');
+            const timestamp = new Date().toLocaleTimeString();
+            if (type === 'Executive Support') {
+                output.innerHTML = `[${timestamp}] SUCCESS: Executive calendar sync & email triage workflow executed successfully[cite: 1].`;
+            } else {
+                output.innerHTML = `[${timestamp}] SUCCESS: Amadeus GDS / IATA travel documentation compliance check verified[cite: 3, 4].`;
+            }
+        }
+    </script>
+</body>
+</html>

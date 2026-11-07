@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services & Expertise | Atitifor Paul E. - Operations & EA Specialist</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            950: '#070D19',
+                            900: '#0A192F',
+                            800: '#0F2342',
+                            700: '#172A46',
+                            600: '#1E3A8A'
+                        },
+                        gold: {
+                            300: '#FDE68A',
+                            400: '#F59E0B',
+                            500: '#D4AF37',
+                            600: '#B8860B',
+                            700: '#92400E'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['Cinzel', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Scrollbar & Decorative Styles */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #070D19;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #172A46;
+            border-radius: 4px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D4AF37;
+        }
+        
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFF5C0 0%, #D4AF37 50%, #B8860B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .gold-border-glow {
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.12);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .gold-border-glow:hover {
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
+            border-color: rgba(212, 175, 55, 0.7);
+        }
+
+        .bg-pattern {
+            background-color: #0A192F;
+            background-image: radial-gradient(rgba(212, 175, 55, 0.06) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+
+        .glass-card {
+            background: rgba(15, 35, 66, 0.65);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body id="top" class="bg-navy-950 text-slate-200 font-sans antialiased selection:bg-gold-500 selection:text-navy-950">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-navy-950/90 backdrop-blur-md border-b border-navy-700/60 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Brand / Logo -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-gold-400 to-gold-600 p-[1px] flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+                        <div class="w-full h-full bg-navy-950 rounded-[7px] flex items-center justify-center">
+                            <span class="font-serif font-bold text-gold-500 text-lg">AP</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-serif font-bold text-lg text-slate-100 tracking-wide group-hover:text-gold-400 transition-colors">ATITIFOR PAUL E.</span>
+                        <span class="text-[10px] tracking-widest text-gold-500 uppercase font-medium">Operations & EA Specialist</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-slate-300 hover:text-gold-400 font-medium text-sm transition-colors">Home</a>
+                    <a href="about.html" class="text-slate-300 hover:text-gold-400 font-medium text-sm transition-colors">About</a>
+                    <a href="services.html" class="text-gold-400 font-medium text-sm border-b-2 border-gold-400 pb-1">Services</a>
+                    <a href="portfolio.html" class="text-slate-300 hover:text-gold-400 font-medium text-sm transition-colors">Portfolio</a>
+                    <a href="contact.html" class="text-slate-300 hover:text-gold-400 font-medium text-sm transition-colors">Contact</a>
+                </nav>
+
+                <!-- Desktop CTA -->
+                <div class="hidden md:flex items-center">
+                    <a href="contact.html" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-gold-500 to-gold-600 text-navy-950 font-semibold text-sm hover:brightness-110 shadow-md shadow-gold-500/10 transition-all hover:-translate-y-0.5">
+                        Get in Touch <i class="fa-solid fa-arrow-right ml-1.5 text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex md:hidden">
+                    <button id="mobile-menu-btn" type="button" class="text-slate-300 hover:text-gold-400 focus:outline-none p-2" aria-label="Toggle Navigation">
+                        <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-navy-900 border-b border-gold-500/20 px-4 pt-2 pb-6 space-y-3">
+            <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-gold-400 hover:bg-navy-800/50">Home</a>
+            <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-gold-400 hover:bg-navy-800/50">About</a>
+            <a href="services.html" class="block px-3 py-2 rounded-md text-base font-medium text-gold-400 bg-navy-800/80">Services</a>
+            <a href="portfolio.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-gold-400 hover:bg-navy-800/50">Portfolio</a>
+            <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-gold-400 hover:bg-navy-800/50">Contact</a>
+            <div class="pt-2">
+                <a href="contact.html" class="block w-full text-center px-4 py-2.5 rounded-full bg-gold-500 text-navy-950 font-semibold text-sm">
+                    Get in Touch
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+
+        <!-- PAGE HEADER / HERO -->
+        <section class="py-16 lg:py-20 bg-pattern border-b border-navy-700/50 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                
+                <!-- Breadcrumb -->
+                <div class="flex items-center gap-2 text-xs text-slate-400 mb-4">
+                    <a href="index.html" class="hover:text-gold-400 transition-colors">Home</a>
+                    <span>/</span>
+                    <span class="text-gold-400 font-medium">Services & Expertise</span>
+                </div>
+
+                <div class="max-w-3xl space-y-4">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-navy-800/90 border border-gold-500/30 text-gold-400 text-xs font-semibold tracking-wide uppercase">
+                        <i class="fa-solid fa-layer-group text-gold-400"></i> Strategic Operational Solutions
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-slate-100 tracking-tight">
+                        Tailored Professional Services & <span class="gold-gradient-text">Operational Mastery</span>
+                    </h1>
+                    <p class="text-base sm:text-lg text-slate-300 leading-relaxed">
+                        High-level executive administrative support, academic governance, scalable CRM operations, and certified travel logistics tailored to elevate leadership efficiency.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SERVICES BREAKDOWN SECTION -->
+        <section id="services-grid" class="py-20 bg-navy-950 border-b border-navy-700/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs font-semibold uppercase tracking-widest text-gold-500 mb-2">Core Solutions</h2>
+                    <p class="text-3xl font-serif font-bold text-slate-100">Comprehensive Service Offerings</p>
+                </div>
+
+                <!-- Category Filters for Services -->
+                <div class="flex flex-wrap items-center justify-center gap-2 mb-12">
+                    <button onclick="filterServices('all')" class="service-tab px-4 py-2 rounded-full text-xs font-semibold bg-gold-500 text-navy-950 transition-all" data-filter="all">All Services</button>
+                    <button onclick="filterServices('ea')" class="service-tab px-4 py-2 rounded-full text-xs font-semibold bg-navy-900 text-slate-300 border border-navy-700 hover:border-gold-500/40 transition-all" data-filter="ea">Executive Assistant</button>
+                    <button onclick="filterServices('crm')" class="service-tab px-4 py-2 rounded-full text-xs font-semibold bg-navy-900 text-slate-300 border border-navy-700 hover:border-gold-500/40 transition-all" data-filter="crm">Customer Support & CRM</button>
+                    <button onclick="filterServices('travel')" class="service-tab px-4 py-2 rounded-full text-xs font-semibold bg-navy-900 text-slate-300 border border-navy-700 hover:border-gold-500/40 transition-all" data-filter="travel">Travel Advisory</button>
+                    <button onclick="filterServices('academic')" class="service-tab px-4 py-2 rounded-full text-xs font-semibold bg-navy-900 text-slate-300 border border-navy-700 hover:border-gold-500/40 transition-all" data-filter="academic">Higher Ed Administration</button>
+                </div>
+
+                <!-- 4 Major Service Cards -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    
+                    <!-- Service Card 1 -->
+                    <div class="service-card rounded-2xl bg-navy-900 border border-navy-700 p-8 hover:border-gold-500/40 transition-all flex flex-col justify-between" data-category="ea">
+                        <div>
+                            <div class="flex items-center justify-between mb-6">
+                                <div class="w-14 h-14 rounded-xl bg-navy-950 border border-gold-500/30 flex items-center justify-center text-gold-400 text-2xl">
+                                    <i class="fa-solid fa-user-tie"></i>
+                                </div>
+                                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-navy-950 text-gold-400 border border-gold-500/20">Executive Support</span>
+                            </div>
+
+                            <h3 class="font-serif text-2xl font-bold text-slate-100 mb-3">Executive Assistance & Workflow Optimization</h3>
+                            <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                                Specialized executive support managing complex calendars, email correspondence, stakeholder liaisons, and high-priority meeting documentation.
+                            </p>
+
+                            <div class="space-y-3 mb-8">
+                                <div class="flex items-start gap-3 text-xs sm:text-sm text-slate-300">
+                                    <i class="fa-solid fa-circle-check text-gold-400 mt-1"></i>
+                                    <span>Executive Calendar Management & Meeting Coordination</span>
+                                </div>
+                                <div class="flex items-start gap-3 text-xs sm:text-sm text-slate-300">
+                                    <i class="fa-solid fa-circle-check text-gold-400 mt-1"></i>
+                                    <span>Email Inbox Zero & Priority Filtering Systems</span>
+                                </div>
+                                <div class="flex items-start gap-3 text-xs sm:text-sm text-slate-300">
+                                    <i class="fa-solid fa-circle-check text-gold-400 mt-1"></i>
+                                    <span>Cross-functional Team & Executive Stakeholder Liaison</span>
+                                </div>
+                                <div class="flex items-start gap-3 text-xs sm:text-sm text-slate-300">
+                                    <i class="fa-solid fa-circle-check text-gold-400 mt-1"></i>
+                                    <span>Bilingual Correspondence (English Professional / French Intermediate)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 border-t border-navy-800 flex items-center justify-between">
+                            <span class="text-xs text-slate-400">Tools: Google Workspace, Notion, Slack</span>
+                            <button onclick="openServiceModal('Executive Assistance', 'Comprehensive executive support enabling leaders to focus on core strategic growth. Includes calendar auditing, high-level travel scheduling, meeting minuting, and governance liaisons.')" class="px-4 py-2 rounded-full bg-navy-950 text-gold-400 border border-gold-500/30 hover:bg-gold-500 hover:text-navy-950 text-xs font-bold transition-all">
+                                View Details <i class="fa-solid fa-chevron-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Service Card 2 -->
+                    <div class="service-card rounded-2xl bg-navy-900 border border-navy-700 p-8 hover:border-gold-500/40 transition-all flex flex-col justify-between" data-category="crm">
+                        <div>
+                            <div class="flex items-center justify-between mb-6">
+                                <div class="w-14 h-14 rounded-xl bg-navy-950 border border-gold-500/30 flex items-center justify-center text-gold-400 text-2xl">
+                                    <i class="fa-solid fa-headset"></i>
+                                </div>
+                                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-navy-950 text-gold-400 border border-gold-500/20">Customer Success</span>
+                            </div>
+
+                            <h3 class="font-serif text-2xl font-bold text-slate-100 mb-3">Customer Support Architecture & CRM Operations</h3>
+                            <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                                Designing and executing customer success frameworks, CRM ticketing escalation protocols, and onboarding systems that maximize client retention.
+                            </p>
+
+                            <div class="space-y-3 mb-8">
+                                <div class="flex items-start gap-3 text-xs sm:text-sm text-slate-300">
+                                    <i class="fa-solid fa-circle-check text-gold-400 mt-1"></i>
+                                    <span>HubSpot CRM & Intercom Onboarding Workflows</span>
+                                </div>
+                                <div class="flex items-start gap-3 text-xs sm:text-sm text-slate-300">
+                                    <i class="fa-solid fa-circle-check text-gold-400 mt-1"></i>
+                                    <span>Ticket Escalation & Response Turnaround Optimization</span>
+                                </div>
+                                <div class="flex items-start gap-3 text-xs sm:text-sm text-slate-300">
+                                    <i class="fa-solid fa-circle-check text-gold-400 mt-1"></i>
+                                    <span>Customer Health Monitoring & Retention Frameworks</span>
+                                </div>
+                                <div class="flex items-start gap-3 text-xs sm:text-sm text-slate-300">
+                                    <i class="fa-solid fa-circle-check text-gold-400 mt-1"></i>
+                                    <span>Multi-channel Support Desk Setup & SLA Enforcement</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 border-t border-navy-800 flex items-center justify-between">
+                            <span class="text-xs text-slate-400">Tools: HubSpot, Intercom, Trello</span>
+                            <button onclick="openServiceModal('Customer Support Architecture', 'Transforming customer inquiry management into high-retention client experiences. Over 5 years of proven experience reducing ticket response times and optimizing user onboarding.')" class="px-4 py-2 rounded-full bg-navy-950 text-gold-400 border border-gold-500/30 hover:bg-gold-500 hover:text-navy-950 text-xs font-bold transition-all">
+                                View Details <i class="fa-solid fa-chevron-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Service Card 3 -->
+                    <div class="service-card rounded-2xl bg-navy-900 border border-navy-700 p-8 hover:border-gold-500/40 transition-all flex flex-col justify-between" data-category="travel">
+                        <div>
+                            <div class="flex items-center justify-between mb-6">
+                                <div class="w-14 h-14 rounded-xl bg-navy-950 border border-gold-500/30 flex items-center justify-center text-gold-400 text-2xl">
+                                    <i class="fa-solid fa-plane-departure"></i>
+                                </div>
+                                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-navy-950 text-gold-400 border border-gold-500/20">Travel Logistics</span>
+                            </div>
+
+                            <h3 class="font-serif text-2xl font-bold text-slate-100 mb-3">Travel Advisory & Itinerary Management</h3>
+                            <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                                Certified travel consultation, custom travel itinerary design, flight booking logistics via Amadeus GDS, and visa application assistance.
+                            </p>
+
+                            <div class="space-y-3 mb-8">
+                                <div class="flex items-start gap-3 text-xs sm:text-sm text-slate-300">
+                                    <i class="fa-solid fa-circle-check text-gold-400 mt-1"></i>
+                                    <span>End-to-End International Itinerary & Transit Planning</span>
+                                </div>
+                                <div class="flex items-start gap-3 text-xs sm:text-sm text-slate-300">
+                                    <i class="fa-solid fa-circle-check text-gold-400 mt-1"></i>
+                                    <span>Visa Application Processing Checklists & Document Compliance</span>
+                                </div>
+                                <div class="flex items-start gap-3 text-xs sm:text-sm text-slate-300">
+                                    <i class="fa-solid fa-circle-check text-gold-400 mt-1"></i>
+                                    <span>Amadeus GDS Flight Reservation & Seat Logistics</span>
+                                </div>
+                                <div class="flex items-start gap-3 text-xs sm:text-sm text-slate-300">
+                                    <i class="fa-solid fa-circle-check text-gold-400 mt-1"></i>
+                                    <span>Group Tour Planning & Destination Advisory (West Africa & Hubs)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 border-t border-navy-800 flex items-center justify-between">
+                            <span class="text-xs text-slate-400">Certification: Lagos Aviation Academy</span>
+                            <button onclick="openServiceModal('Travel & Visa Advisory', 'IATA and Amadeus GDS certified travel planning. End-to-end travel logistics ensuring seamless international transit, complete visa documentation compliance, and customized group tour itineraries.')" class="px-4 py-2 rounded-full bg-navy-950 text-gold-400 border border-gold-500/30 hover:bg-gold-500 hover:text-navy-950 text-xs font-bold transition-all">
+                                View Details <i class="fa-solid fa-chevron-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Service Card 4 -->
+                    <div class="service-card rounded-2xl bg-navy-900 border border-navy-700 p-8 hover:border-gold-500/40 transition-all flex flex-col justify-between" data-category="academic">
+                        <div>
+                            <div class="flex items-center justify-between mb-6">
+                                <div class="w-14 h-14 rounded-xl bg-navy-950 border border-gold-500/30 flex items-center justify-center text-gold-400 text-2xl">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </div>
+                                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-navy-950 text-gold-400 border border-gold-500/20">Academic Governance</span>
+                            </div>
+
+                            <h3 class="font-serif text-2xl font-bold text-slate-100 mb-3">Higher Education Administration & Operations</h3>
+                            <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                                Institutional administration, student affairs governance, academic policy enforcement, and lecture logistics management across university campuses.
+                            </p>
+
+                            <div class="space-y-3 mb-8">
+                                <div class="flex items-start gap-3 text-xs sm:text-sm text-slate-300">
+                                    <i class="fa-solid fa-circle-check text-gold-400 mt-1"></i>
+                                    <span>Campus Administrative Governance & Executive Board Liaison</span>
+                                </div>
+                                <div class="flex items-start gap-3 text-xs sm:text-sm text-slate-300">
+                                    <i class="fa-solid fa-circle-check text-gold-400 mt-1"></i>
+                                    <span>Student Engagement & Welfare Policy Enforcement</span>
+                                </div>
+                                <div class="flex items-start gap-3 text-xs sm:text-sm text-slate-300">
+                                    <i class="fa-solid fa-circle-check text-gold-400 mt-1"></i>
+                                    <span>Academic Schedule Logistics & Curriculum Operational Delivery</span>
+                                </div>
+                                <div class="flex items-start gap-3 text-xs sm:text-sm text-slate-300">
+                                    <i class="fa-solid fa-circle-check text-gold-400 mt-1"></i>
+                                    <span>University Event Coordination & Non-Academic Operations</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 border-t border-navy-800 flex items-center justify-between">
+                            <span class="text-xs text-slate-400">Tenure: Dean of Student Affairs (5+ Yrs)</span>
+                            <button onclick="openServiceModal('Higher Education Administration', 'Over half a decade serving as Dean of Student Affairs at ESCT University. Specializing in institutional compliance, student governance frameworks, and multi-campus academic administrative delivery.')" class="px-4 py-2 rounded-full bg-navy-950 text-gold-400 border border-gold-500/30 hover:bg-gold-500 hover:text-navy-950 text-xs font-bold transition-all">
+                                View Details <i class="fa-solid fa-chevron-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- OPERATIONAL TOOLSTACK GRID -->
+        <section id="tool-stack" class="py-20 bg-navy-900 border-b border-navy-700/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs font-semibold uppercase tracking-widest text-gold-500 mb-2">Technical Proficiency</h2>
+                    <p class="text-3xl font-serif font-bold text-slate-100">Modern Operational Toolstack</p>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+                    
+                    <div class="p-6 rounded-2xl bg-navy-950 border border-navy-700 flex flex-col items-center text-center hover:border-gold-500/50 transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-navy-900 flex items-center justify-center text-gold-400 text-2xl mb-3 group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-google"></i>
+                        </div>
+                        <h4 class="font-serif font-bold text-slate-100 text-sm">Google Workspace</h4>
+                        <span class="text-[10px] text-slate-400 mt-1">Docs, Sheets, Drive, Mail</span>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-navy-950 border border-navy-700 flex flex-col items-center text-center hover:border-gold-500/50 transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-navy-900 flex items-center justify-center text-gold-400 text-2xl mb-3 group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-hubspot"></i>
+                        </div>
+                        <h4 class="font-serif font-bold text-slate-100 text-sm">HubSpot CRM</h4>
+                        <span class="text-[10px] text-slate-400 mt-1">Pipeline & Retention</span>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-navy-950 border border-navy-700 flex flex-col items-center text-center hover:border-gold-500/50 transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-navy-900 flex items-center justify-center text-gold-400 text-2xl mb-3 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-comments"></i>
+                        </div>
+                        <h4 class="font-serif font-bold text-slate-100 text-sm">Intercom</h4>
+                        <span class="text-[10px] text-slate-400 mt-1">Support & Live Chat</span>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-navy-950 border border-navy-700 flex flex-col items-center text-center hover:border-gold-500/50 transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-navy-900 flex items-center justify-center text-gold-400 text-2xl mb-3 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-note-sticky"></i>
+                        </div>
+                        <h4 class="font-serif font-bold text-slate-100 text-sm">Notion</h4>
+                        <span class="text-[10px] text-slate-400 mt-1">Wiki & Task Systems</span>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-navy-950 border border-navy-700 flex flex-col items-center text-center hover:border-gold-500/50 transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-navy-900 flex items-center justify-center text-gold-400 text-2xl mb-3 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-trello"></i>
+                        </div>
+                        <h4 class="font-serif font-bold text-slate-100 text-sm">Trello</h4>
+                        <span class="text-[10px] text-slate-400 mt-1">Kanban & Logistics</span>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-navy-950 border border-navy-700 flex flex-col items-center text-center hover:border-gold-500/50 transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-navy-900 flex items-center justify-center text-gold-400 text-2xl mb-3 group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-slack"></i>
+                        </div>
+                        <h4 class="font-serif font-bold text-slate-100 text-sm">Slack</h4>
+                        <span class="text-[10px] text-slate-400 mt-1">Async Comms & Channels</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SERVICE PROCESS / HOW I WORK -->
+        <section class="py-20 bg-navy-950 border-b border-navy-700/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs font-semibold uppercase tracking-widest text-gold-500 mb-2">Workflow Methodology</h2>
+                    <p class="text-3xl font-serif font-bold text-slate-100">How I Deliver Results</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <div class="p-8 rounded-2xl bg-navy-900 border border-navy-700 text-center relative">
+                        <div class="w-10 h-10 rounded-full bg-gold-500 text-navy-950 font-bold font-serif flex items-center justify-center mx-auto mb-6 text-lg">1</div>
+                        <h3 class="font-serif text-xl font-bold text-slate-100 mb-3">Discovery & Audit</h3>
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                            Analyzing current administrative pain points, calendar bottlenecks, customer ticket backlogs, or travel requirements to define exact SOP objectives.
+                        </p>
+                    </div>
+
+                    <div class="p-8 rounded-2xl bg-navy-900 border border-navy-700 text-center relative">
+                        <div class="w-10 h-10 rounded-full bg-gold-500 text-navy-950 font-bold font-serif flex items-center justify-center mx-auto mb-6 text-lg">2</div>
+                        <h3 class="font-serif text-xl font-bold text-slate-100 mb-3">System Implementation</h3>
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                            Deploying tailored workflows in HubSpot, Google Workspace, or Notion, standardizing communication protocols, and organizing itinerary logistics.
+                        </p>
+                    </div>
+
+                    <div class="p-8 rounded-2xl bg-navy-900 border border-navy-700 text-center relative">
+                        <div class="w-10 h-10 rounded-full bg-gold-500 text-navy-950 font-bold font-serif flex items-center justify-center mx-auto mb-6 text-lg">3</div>
+                        <h3 class="font-serif text-xl font-bold text-slate-100 mb-3">Execution & Governance</h3>
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                            Sustaining seamless daily operations, enforcing institutional compliance, handling executive escalations, and maintaining 100% schedule accuracy.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA SECTION -->
+        <section class="py-20 bg-navy-950 relative overflow-hidden">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <div class="p-10 sm:p-14 rounded-3xl bg-gradient-to-b from-navy-900 to-navy-950 border border-gold-500/30 gold-border-glow">
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-100 mb-4">
+                        Need Custom Executive Support or Operations Advisory?
+                    </h2>
+                    <p class="text-slate-300 text-base sm:text-lg mb-8 max-w-2xl mx-auto">
+                        Let's discuss how we can streamline your executive schedule, setup CRM workflows, or manage complex educational/travel logistics.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <a href="contact.html" class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-gold-500 to-gold-600 text-navy-950 font-bold text-sm tracking-wide hover:brightness-110 shadow-lg shadow-gold-500/20 transition-all">
+                            Book a Consultation <i class="fa-solid fa-calendar-check ml-2"></i>
+                        </a>
+                        <a href="portfolio.html" class="w-full sm:w-auto px-8 py-4 rounded-full bg-navy-800 text-slate-200 border border-gold-500/40 hover:bg-navy-700 font-semibold text-sm transition-all">
+                            Explore Work Showcase <i class="fa-solid fa-briefcase ml-2 text-gold-400"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- GLOBAL FOOTER -->
+    <footer class="bg-navy-950 border-t border-navy-800 py-12 text-slate-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                
+                <!-- Col 1: Brand Info -->
+                <div class="md:col-span-2 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded bg-gold-500 text-navy-950 font-serif font-bold flex items-center justify-center">
+                            AP
+                        </div>
+                        <span class="font-serif font-bold text-lg text-slate-100">ATITIFOR PAUL E.</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
+                        Executive Assistant | Operations Specialist | Higher Educational Administrator | Customer Support Architect | Certified Travel Planner.
+                    </p>
+                    <div class="text-xs text-slate-400 space-y-1">
+                        <p><i class="fa-solid fa-location-dot text-gold-400 mr-2"></i>Cotonou, Benin Republic</p>
+                        <p><i class="fa-solid fa-phone text-gold-400 mr-2"></i>+229 0162818570 / 0151877001</p>
+                        <p><i class="fa-solid fa-envelope text-gold-400 mr-2"></i>Directorhp4@gmail.com</p>
+                    </div>
+                </div>
+
+                <!-- Col 2: Navigation Links -->
+                <div>
+                    <h4 class="font-serif font-bold text-slate-100 text-sm mb-4">Navigation</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="index.html" class="hover:text-gold-400 transition-colors">Home Page</a></li>
+                        <li><a href="about.html" class="hover:text-gold-400 transition-colors">About & Profile</a></li>
+                        <li><a href="services.html" class="text-gold-400 font-medium">Services Offered</a></li>
+                        <li><a href="portfolio.html" class="hover:text-gold-400 transition-colors">Project Showcase</a></li>
+                        <li><a href="contact.html" class="hover:text-gold-400 transition-colors">Get in Touch</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Channels -->
+                <div>
+                    <h4 class="font-serif font-bold text-slate-100 text-sm mb-4">Professional Profiles</h4>
+                    <div class="flex gap-3">
+                        <a href="https://linkedin.com" target="_blank" class="w-9 h-9 rounded-full bg-navy-900 border border-navy-700 flex items-center justify-center text-slate-300 hover:text-gold-400 hover:border-gold-500 transition-all">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="mailto:Directorhp4@gmail.com" class="w-9 h-9 rounded-full bg-navy-900 border border-navy-700 flex items-center justify-center text-slate-300 hover:text-gold-400 hover:border-gold-500 transition-all">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                        <a href="contact.html" class="w-9 h-9 rounded-full bg-navy-900 border border-navy-700 flex items-center justify-center text-slate-300 hover:text-gold-400 hover:border-gold-500 transition-all">
+                            <i class="fa-solid fa-globe"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-8 border-t border-navy-900 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+                <p>&copy; 2026 Atitifor Paul E. All Rights Reserved.</p>
+                <a href="#top" class="hover:text-gold-400 transition-colors flex items-center gap-1">
+                    Back to Top <i class="fa-solid fa-arrow-up"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE SERVICE DETAIL MODAL -->
+    <div id="service-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-navy-950/80 backdrop-blur-sm">
+        <div class="bg-navy-900 border border-gold-500/40 rounded-2xl max-w-lg w-full p-6 shadow-2xl relative">
+            <button onclick="closeServiceModal()" class="absolute top-4 right-4 text-slate-400 hover:text-gold-400 text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="w-12 h-12 rounded-xl bg-gold-500/20 text-gold-400 flex items-center justify-center text-xl mb-4">
+                <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <h3 id="modal-service-title" class="font-serif text-xl font-bold text-slate-100 mb-3">Service Name</h3>
+            <p id="modal-service-desc" class="text-sm text-slate-300 leading-relaxed mb-6">Service description content will load here dynamically.</p>
+            <div class="flex justify-between items-center pt-4 border-t border-navy-800">
+                <a href="contact.html" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-gold-500 to-gold-600 text-navy-950 font-bold text-xs">
+                    Inquire About Service
+                </a>
+                <button onclick="closeServiceModal()" class="text-xs text-slate-400 hover:text-slate-200">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- INTERACTIVE JAVASCRIPT -->
+    <script>
+        // Mobile Navigation Drawer Logic
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if(mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        });
+
+        // Category Service Filter Logic
+        function filterServices(category) {
+            const cards = document.querySelectorAll('.service-card');
+            const tabs = document.querySelectorAll('.service-tab');
+
+            tabs.forEach(tab => {
+                if(tab.getAttribute('data-filter') === category) {
+                    tab.classList.remove('bg-navy-900', 'text-slate-300', 'border', 'border-navy-700');
+                    tab.classList.add('bg-gold-500', 'text-navy-950');
+                } else {
+                    tab.classList.remove('bg-gold-500', 'text-navy-950');
+                    tab.classList.add('bg-navy-900', 'text-slate-300', 'border', 'border-navy-700');
+                }
+            });
+
+            cards.forEach(card => {
+                if(category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Service Modal Dialog Logic
+        function openServiceModal(title, description) {
+            document.getElementById('modal-service-title').innerText = title;
+            document.getElementById('modal-service-desc').innerText = description;
+            document.getElementById('service-modal').classList.remove('hidden');
+        }
+
+        function closeServiceModal() {
+            document.getElementById('service-modal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>

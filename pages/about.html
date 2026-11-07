@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Atitifor Paul E. - Executive Assistant & Operations Leader</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            950: '#070D19',
+                            900: '#0A192F',
+                            800: '#0F2342',
+                            700: '#172A46',
+                            600: '#1E3A8A'
+                        },
+                        gold: {
+                            300: '#FDE68A',
+                            400: '#F59E0B',
+                            500: '#D4AF37',
+                            600: '#B8860B',
+                            700: '#92400E'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['Cinzel', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Scrollbar & Aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #070D19;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #172A46;
+            border-radius: 4px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D4AF37;
+        }
+        
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFF5C0 0%, #D4AF37 50%, #B8860B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .gold-border-glow {
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.12);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .gold-border-glow:hover {
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
+            border-color: rgba(212, 175, 55, 0.7);
+        }
+
+        .bg-pattern {
+            background-color: #0A192F;
+            background-image: radial-gradient(rgba(212, 175, 55, 0.06) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+
+        .glass-card {
+            background: rgba(15, 35, 66, 0.65);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -33px;
+            top: 6px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #D4AF37;
+            border: 3px solid #070D19;
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+        }
+    </style>
+</head>
+<body id="top" class="bg-navy-950 text-slate-200 font-sans antialiased selection:bg-gold-500 selection:text-navy-950">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-navy-950/90 backdrop-blur-md border-b border-navy-700/60 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Brand / Logo -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-gold-400 to-gold-600 p-[1px] flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+                        <div class="w-full h-full bg-navy-950 rounded-[7px] flex items-center justify-center">
+                            <span class="font-serif font-bold text-gold-500 text-lg">AP</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-serif font-bold text-lg text-slate-100 tracking-wide group-hover:text-gold-400 transition-colors">ATITIFOR PAUL E.</span>
+                        <span class="text-[10px] tracking-widest text-gold-500 uppercase font-medium">Operations & EA Specialist</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-slate-300 hover:text-gold-400 font-medium text-sm transition-colors">Home</a>
+                    <a href="about.html" class="text-gold-400 font-medium text-sm border-b-2 border-gold-400 pb-1">About</a>
+                    <a href="services.html" class="text-slate-300 hover:text-gold-400 font-medium text-sm transition-colors">Services</a>
+                    <a href="portfolio.html" class="text-slate-300 hover:text-gold-400 font-medium text-sm transition-colors">Portfolio</a>
+                    <a href="contact.html" class="text-slate-300 hover:text-gold-400 font-medium text-sm transition-colors">Contact</a>
+                </nav>
+
+                <!-- Desktop CTA -->
+                <div class="hidden md:flex items-center">
+                    <a href="contact.html" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-gold-500 to-gold-600 text-navy-950 font-semibold text-sm hover:brightness-110 shadow-md shadow-gold-500/10 transition-all hover:-translate-y-0.5">
+                        Get in Touch <i class="fa-solid fa-arrow-right ml-1.5 text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex md:hidden">
+                    <button id="mobile-menu-btn" type="button" class="text-slate-300 hover:text-gold-400 focus:outline-none p-2" aria-label="Toggle Navigation">
+                        <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-navy-900 border-b border-gold-500/20 px-4 pt-2 pb-6 space-y-3">
+            <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-gold-400 hover:bg-navy-800/50">Home</a>
+            <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gold-400 bg-navy-800/80">About</a>
+            <a href="services.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-gold-400 hover:bg-navy-800/50">Services</a>
+            <a href="portfolio.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-gold-400 hover:bg-navy-800/50">Portfolio</a>
+            <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-gold-400 hover:bg-navy-800/50">Contact</a>
+            <div class="pt-2">
+                <a href="contact.html" class="block w-full text-center px-4 py-2.5 rounded-full bg-gold-500 text-navy-950 font-semibold text-sm">
+                    Get in Touch
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+
+        <!-- PAGE HEADER / HERO SECTION -->
+        <section class="py-16 lg:py-20 bg-pattern border-b border-navy-700/50 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                
+                <!-- Breadcrumb -->
+                <div class="flex items-center gap-2 text-xs text-slate-400 mb-4">
+                    <a href="index.html" class="hover:text-gold-400 transition-colors">Home</a>
+                    <span>/</span>
+                    <span class="text-gold-400 font-medium">About Me</span>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    
+                    <div class="lg:col-span-8 space-y-4">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-navy-800/90 border border-gold-500/30 text-gold-400 text-xs font-semibold tracking-wide uppercase">
+                            <i class="fa-solid fa-id-card text-gold-400"></i> Executive Profile & Governance Specialist
+                        </div>
+                        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-slate-100 tracking-tight">
+                            Professional Background & <span class="gold-gradient-text">Leadership Narrative</span>
+                        </h1>
+                        <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-3xl">
+                            Bridging high-level administrative governance, academic operations, customer support architecture, and international travel advisory.
+                        </p>
+                    </div>
+
+                    <!-- Header Stat Badges -->
+                    <div class="lg:col-span-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div class="p-4 rounded-xl bg-navy-900/90 border border-gold-500/30">
+                            <div class="text-gold-400 text-lg mb-1"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <div class="text-sm font-bold text-slate-100">M.Sc. HRM Graduate</div>
+                            <div class="text-xs text-slate-400">ESCAE University</div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-navy-900/90 border border-gold-500/30">
+                            <div class="text-gold-400 text-lg mb-1"><i class="fa-solid fa-award"></i></div>
+                            <div class="text-sm font-bold text-slate-100">Certified Travel Planner</div>
+                            <div class="text-xs text-slate-400">IATA & Amadeus trained</div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-navy-900/90 border border-gold-500/30 sm:col-span-2">
+                            <div class="text-gold-400 text-lg mb-1"><i class="fa-solid fa-shield-halved"></i></div>
+                            <div class="text-sm font-bold text-slate-100">5+ Academic Years as Dean</div>
+                            <div class="text-xs text-slate-400">ESCT University Benin Republic</div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PROFESSIONAL BIO & STORY -->
+        <section id="bio" class="py-16 bg-navy-950 border-b border-navy-700/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Bio Visual Container -->
+                    <div class="lg:col-span-5 flex justify-center">
+                        <div class="relative w-full max-w-md">
+                            <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-gold-500 to-navy-600 blur opacity-30"></div>
+                            <div class="relative rounded-2xl bg-navy-900 border border-gold-500/30 p-6 space-y-6">
+                                
+                                <div class="rounded-xl overflow-hidden bg-navy-800 border border-navy-700 aspect-[4/5] flex items-center justify-center">
+                                    <img src="https://placehold.co/400x500/0A192F/D4AF37?text=Atitifor+Paul+E." alt="Atitifor Paul E." class="w-full h-full object-cover" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full p-6 text-center bg-navy-900\'><div class=\'w-20 h-20 rounded-full bg-navy-800 border-2 border-gold-500 flex items-center justify-center mb-3\'><span class=\'font-serif text-2xl text-gold-400 font-bold\'>AP</span></div><h3 class=\'font-serif text-lg font-bold text-slate-100\'>Atitifor Paul E.</h3><p class=\'text-xs text-gold-400 mt-1\'>Executive Assistant & Dean of Students</p></div>';" />
+                                </div>
+
+                                <div class="space-y-3 pt-2">
+                                    <div class="flex items-center justify-between text-xs py-1.5 border-b border-navy-800">
+                                        <span class="text-slate-400">Primary Location:</span>
+                                        <span class="font-semibold text-slate-200">Cotonou, Benin Republic</span>
+                                    </div>
+                                    <div class="flex items-center justify-between text-xs py-1.5 border-b border-navy-800">
+                                        <span class="text-slate-400">Languages:</span>
+                                        <span class="font-semibold text-gold-400">English (Native) | French (Inter.)</span>
+                                    </div>
+                                    <div class="flex items-center justify-between text-xs py-1.5">
+                                        <span class="text-slate-400">Availability:</span>
+                                        <span class="font-semibold text-slate-200">Executive & Advisory Roles</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bio Narrative Content -->
+                    <div class="lg:col-span-7 space-y-6">
+                        <div>
+                            <h2 class="text-xs font-semibold uppercase tracking-widest text-gold-500 mb-2">Executive Summary</h2>
+                            <h3 class="text-2xl sm:text-3xl font-serif font-bold text-slate-100">Dedicated Operations Architect & Governance Executive</h3>
+                        </div>
+
+                        <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+                            Versatile and performance-driven professional with extensive expertise spanning Executive Assistance, Academic Operations, Customer Support, and International Travel Planning. Demonstrated success as a <strong class="text-gold-400 font-semibold">Dean of Student Affairs</strong>, managing high-level administrative governance, student engagement, and operational compliance across higher education institutions.
+                        </p>
+
+                        <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+                            Proven track record in designing end-to-end travel consultation workflows, managing customer support architecture, and delivering university lectures in management disciplines. Adept at leveraging modern tools (<span class="text-slate-100 font-medium">Google Workspace, HubSpot CRM, Intercom, Notion, Trello, Slack</span>) to optimize workflows, build scalable operational frameworks, and elevate client and stakeholder satisfaction.
+                        </p>
+
+                        <!-- Key Pillars Grid -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                            <div class="p-4 rounded-xl bg-navy-900 border border-navy-700">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <div class="w-8 h-8 rounded bg-gold-500/20 text-gold-400 flex items-center justify-center text-sm font-bold">01</div>
+                                    <h4 class="font-serif font-bold text-slate-100 text-sm">Administrative Governance</h4>
+                                </div>
+                                <p class="text-xs text-slate-400 leading-relaxed">
+                                    Managing institutional compliance, executive liaisons, policy enforcement, and multi-campus logistics.
+                                </p>
+                            </div>
+
+                            <div class="p-4 rounded-xl bg-navy-900 border border-navy-700">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <div class="w-8 h-8 rounded bg-gold-500/20 text-gold-400 flex items-center justify-center text-sm font-bold">02</div>
+                                    <h4 class="font-serif font-bold text-slate-100 text-sm">Travel & Visa Logistics</h4>
+                                </div>
+                                <p class="text-xs text-slate-400 leading-relaxed">
+                                    IATA & Amadeus trained itinerary planning, visa application workflows, and transit hub management.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- CTA Row -->
+                        <div class="pt-4 flex flex-wrap gap-4">
+                            <a href="assets/docs/resume.pdf" target="_blank" onclick="alert('Download CV requested! PDF resume will download.')" class="px-6 py-3 rounded-full bg-gradient-to-r from-gold-500 to-gold-600 text-navy-950 font-bold text-sm hover:brightness-110 transition-all shadow-md">
+                                Download Official CV <i class="fa-solid fa-download ml-2"></i>
+                            </a>
+                            <a href="contact.html" class="px-6 py-3 rounded-full bg-navy-900 text-slate-200 border border-gold-500/40 hover:bg-navy-800 font-semibold text-sm transition-all">
+                                Request Consultation <i class="fa-solid fa-calendar-check ml-2 text-gold-400"></i>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CORE COMPETENCIES GRID -->
+        <section id="competencies" class="py-20 bg-navy-900 border-b border-navy-700/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs font-semibold uppercase tracking-widest text-gold-500 mb-2">Specialized Expertise</h2>
+                    <p class="text-3xl font-serif font-bold text-slate-100">Core Operational Competencies</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <!-- Competency 1 -->
+                    <div class="p-6 rounded-2xl bg-navy-950 border border-navy-700 hover:border-gold-500/50 transition-all duration-300 glass-card">
+                        <div class="w-12 h-12 rounded-xl bg-navy-800 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl mb-5">
+                            <i class="fa-solid fa-user-gear"></i>
+                        </div>
+                        <h3 class="font-serif font-bold text-slate-100 text-lg mb-3">Executive & Administrative Support</h3>
+                        <ul class="space-y-2 text-xs text-slate-300">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-gold-400 mt-0.5"></i> <span>Executive Calendar & Email Management</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-gold-400 mt-0.5"></i> <span>Workflow Optimization & Automation</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-gold-400 mt-0.5"></i> <span>Institutional Governance & Executive Liaison</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-gold-400 mt-0.5"></i> <span>Meeting Documentation & Minutes</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Competency 2 -->
+                    <div class="p-6 rounded-2xl bg-navy-950 border border-navy-700 hover:border-gold-500/50 transition-all duration-300 glass-card">
+                        <div class="w-12 h-12 rounded-xl bg-navy-800 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl mb-5">
+                            <i class="fa-solid fa-school"></i>
+                        </div>
+                        <h3 class="font-serif font-bold text-slate-100 text-lg mb-3">Student Affairs & Higher Ed Admin</h3>
+                        <ul class="space-y-2 text-xs text-slate-300">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-gold-400 mt-0.5"></i> <span>Campus Administration Governance</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-gold-400 mt-0.5"></i> <span>Student Welfare & Policy Enforcement</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-gold-400 mt-0.5"></i> <span>Curriculum & Schedule Logistics</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-gold-400 mt-0.5"></i> <span>Multi-Campus Event Coordination</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Competency 3 -->
+                    <div class="p-6 rounded-2xl bg-navy-950 border border-navy-700 hover:border-gold-500/50 transition-all duration-300 glass-card">
+                        <div class="w-12 h-12 rounded-xl bg-navy-800 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl mb-5">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <h3 class="font-serif font-bold text-slate-100 text-lg mb-3">Customer Success & Support</h3>
+                        <ul class="space-y-2 text-xs text-slate-300">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-gold-400 mt-0.5"></i> <span>CRM Workflows (HubSpot, Intercom)</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-gold-400 mt-0.5"></i> <span>Structured Onboarding Frameworks</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-gold-400 mt-0.5"></i> <span>Ticket Escalation & Resolution</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-gold-400 mt-0.5"></i> <span>Long-term Retention Optimization</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Competency 4 -->
+                    <div class="p-6 rounded-2xl bg-navy-950 border border-navy-700 hover:border-gold-500/50 transition-all duration-300 glass-card">
+                        <div class="w-12 h-12 rounded-xl bg-navy-800 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl mb-5">
+                            <i class="fa-solid fa-plane-up"></i>
+                        </div>
+                        <h3 class="font-serif font-bold text-slate-100 text-lg mb-3">Travel Advisory & Tour Management</h3>
+                        <ul class="space-y-2 text-xs text-slate-300">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-gold-400 mt-0.5"></i> <span>End-to-End Itinerary Planning</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-gold-400 mt-0.5"></i> <span>Visa Application & Processing Support</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-gold-400 mt-0.5"></i> <span>Group Tour Operations & Guiding</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-gold-400 mt-0.5"></i> <span>Amadeus GDS & Flight Logistics</span></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- INTERACTIVE PROFESSIONAL EXPERIENCE TIMELINE -->
+        <section id="experience" class="py-20 bg-navy-950 border-b border-navy-700/50">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-xs font-semibold uppercase tracking-widest text-gold-500 mb-2">Career Journey</h2>
+                    <p class="text-3xl font-serif font-bold text-slate-100">Professional Experience Timeline</p>
+                </div>
+
+                <!-- Timeline Category Filter Controls -->
+                <div class="flex flex-wrap items-center justify-center gap-2 mb-12">
+                    <button onclick="filterTimeline('all')" class="timeline-tab px-4 py-2 rounded-full text-xs font-semibold bg-gold-500 text-navy-950 transition-all" data-category="all">All Roles</button>
+                    <button onclick="filterTimeline('highered')" class="timeline-tab px-4 py-2 rounded-full text-xs font-semibold bg-navy-900 text-slate-300 border border-navy-700 hover:border-gold-500/40 transition-all" data-category="highered">Higher Ed Governance</button>
+                    <button onclick="filterTimeline('ea-support')" class="timeline-tab px-4 py-2 rounded-full text-xs font-semibold bg-navy-900 text-slate-300 border border-navy-700 hover:border-gold-500/40 transition-all" data-category="ea-support">EA & Customer Support</button>
+                    <button onclick="filterTimeline('travel')" class="timeline-tab px-4 py-2 rounded-full text-xs font-semibold bg-navy-900 text-slate-300 border border-navy-700 hover:border-gold-500/40 transition-all" data-category="travel">Travel & Logistics</button>
+                </div>
+
+                <!-- Timeline Container -->
+                <div class="relative pl-8 border-l-2 border-gold-500/30 space-y-10">
+                    
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item relative group timeline-card" data-category="highered">
+                        <div class="p-6 rounded-2xl bg-navy-900 border border-navy-700 hover:border-gold-500/40 transition-all">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <div>
+                                    <h3 class="font-serif text-xl font-bold text-slate-100">Dean of Student Affairs</h3>
+                                    <p class="text-xs text-gold-400 font-medium">ESCT University, Benin Republic</p>
+                                </div>
+                                <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-navy-950 text-gold-400 border border-gold-500/20 self-start sm:self-auto">Sept 2020 – April 2026</span>
+                            </div>
+                            <ul class="space-y-2 text-xs sm:text-sm text-slate-300 list-disc list-inside leading-relaxed">
+                                <li>Headed student affairs operations, managing administrative compliance, conflict resolution, and student engagement policies across campus.</li>
+                                <li>Served as the primary executive liaison between university leadership, academic boards, and the student body to maintain institutional SOPs.</li>
+                                <li>Oversaw non-academic operations, student welfare frameworks, and university event logistics for 5+ academic years.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-item relative group timeline-card" data-category="highered">
+                        <div class="p-6 rounded-2xl bg-navy-900 border border-navy-700 hover:border-gold-500/40 transition-all">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <div>
+                                    <h3 class="font-serif text-xl font-bold text-slate-100">Operations & Student Administration Liaison (University Lecturer)</h3>
+                                    <p class="text-xs text-gold-400 font-medium">Academic Institutions (ESCT, IMM, ESCAE Universities)</p>
+                                </div>
+                                <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-navy-950 text-gold-400 border border-gold-500/20 self-start sm:self-auto">Sept 2021 – April 2026</span>
+                            </div>
+                            <ul class="space-y-2 text-xs sm:text-sm text-slate-300 list-disc list-inside leading-relaxed">
+                                <li>Oversee operational delivery, curriculum planning, and student administration policies for management courses.</li>
+                                <li>Act as primary administrative liaison between university management, academic staff, and student bodies to ensure smooth execution of schedules.</li>
+                                <li>Coordinate student engagement policies across multiple university campuses.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 3 -->
+                    <div class="timeline-item relative group timeline-card" data-category="ea-support">
+                        <div class="p-6 rounded-2xl bg-navy-900 border border-navy-700 hover:border-gold-500/40 transition-all">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <div>
+                                    <h3 class="font-serif text-xl font-bold text-slate-100">Executive Assistant & Administrative Specialist</h3>
+                                    <p class="text-xs text-gold-400 font-medium">Freelancing Advisory Services | Cotonou, Benin Republic</p>
+                                </div>
+                                <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-navy-950 text-gold-400 border border-gold-500/20 self-start sm:self-auto">Aug 2025 – Sept 2026</span>
+                            </div>
+                            <ul class="space-y-2 text-xs sm:text-sm text-slate-300 list-disc list-inside leading-relaxed">
+                                <li>Provide high-level executive support, managing complex calendars, email correspondence, and administrative workflows for diverse clients.</li>
+                                <li>Design end-to-end travel consultation and advisory workflows aligned with international guidelines for client itineraries.</li>
+                                <li>Implement customer onboarding and retention frameworks using HubSpot CRM and Intercom to streamline service adoption.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 4 -->
+                    <div class="timeline-item relative group timeline-card" data-category="travel">
+                        <div class="p-6 rounded-2xl bg-navy-900 border border-navy-700 hover:border-gold-500/40 transition-all">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <div>
+                                    <h3 class="font-serif text-xl font-bold text-slate-100">Tour Guide & Travel Planner</h3>
+                                    <p class="text-xs text-gold-400 font-medium">HPWIZ T & T LTD & Northline Immigration LTD</p>
+                                </div>
+                                <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-navy-950 text-gold-400 border border-gold-500/20 self-start sm:self-auto">Aug 2025 – Sept 2026</span>
+                            </div>
+                            <ul class="space-y-2 text-xs sm:text-sm text-slate-300 list-disc list-inside leading-relaxed">
+                                <li>Designed end-to-end travel itineraries, managed group tours, and provided comprehensive client travel advisory services.</li>
+                                <li>Facilitated visa application processing workflows and ensured strict compliance with international travel and immigration documentation standards.</li>
+                                <li>Coordinated client consultations and travel logistics across West African destinations and international transit hubs.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 5 -->
+                    <div class="timeline-item relative group timeline-card" data-category="ea-support">
+                        <div class="p-6 rounded-2xl bg-navy-900 border border-navy-700 hover:border-gold-500/40 transition-all">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <div>
+                                    <h3 class="font-serif text-xl font-bold text-slate-100">Customer Support Specialist</h3>
+                                    <p class="text-xs text-gold-400 font-medium">HPWIZ Properties and Services</p>
+                                </div>
+                                <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-navy-950 text-gold-400 border border-gold-500/20 self-start sm:self-auto">Sept 2017 – Sept 2022</span>
+                            </div>
+                            <ul class="space-y-2 text-xs sm:text-sm text-slate-300 list-disc list-inside leading-relaxed">
+                                <li>Managed customer inquiry channels, resolving complex support tickets and maintaining high retention rates over 5 years.</li>
+                                <li>Implemented structured onboarding frameworks and improved customer response turnaround times.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 6 -->
+                    <div class="timeline-item relative group timeline-card" data-category="travel">
+                        <div class="p-6 rounded-2xl bg-navy-900 border border-navy-700 hover:border-gold-500/40 transition-all">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <div>
+                                    <h3 class="font-serif text-xl font-bold text-slate-100">Logistics Team Member & Co-Organizer</h3>
+                                    <p class="text-xs text-gold-400 font-medium">IndabaX Benin Republic (Annual Global Event)</p>
+                                </div>
+                                <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-navy-950 text-gold-400 border border-gold-500/20 self-start sm:self-auto">2023 – Present</span>
+                            </div>
+                            <ul class="space-y-2 text-xs sm:text-sm text-slate-300 list-disc list-inside leading-relaxed">
+                                <li>Support logistics and operational planning for artificial intelligence and machine learning outreach initiatives and meetings across Benin Republic.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- EDUCATION & CERTIFICATIONS GRID -->
+        <section id="education-certifications" class="py-20 bg-navy-900 border-b border-navy-700/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs font-semibold uppercase tracking-widest text-gold-500 mb-2">Academic & Credentials</h2>
+                    <p class="text-3xl font-serif font-bold text-slate-100">Education & Professional Certifications</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    
+                    <!-- Academic Degrees Column -->
+                    <div class="space-y-6">
+                        <h3 class="font-serif text-xl font-bold text-slate-100 flex items-center gap-2">
+                            <i class="fa-solid fa-graduation-cap text-gold-400"></i> Academic Degrees
+                        </h3>
+
+                        <!-- Degree 1 -->
+                        <div class="p-6 rounded-2xl bg-navy-950 border border-navy-700 hover:border-gold-500/40 transition-all">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="px-2.5 py-1 rounded text-[10px] font-bold uppercase bg-gold-500/20 text-gold-400">Master of Science (M.Sc.)</span>
+                                <span class="text-xs text-slate-400">2022 – 2024</span>
+                            </div>
+                            <h4 class="font-serif text-lg font-bold text-slate-100">Human Resource Management</h4>
+                            <p class="text-xs text-slate-300 mt-1">ESCAE University, Porto-Novo, Benin Republic</p>
+                            <p class="text-xs text-slate-400 mt-3 leading-relaxed">
+                                Advanced coursework in strategic HR governance, organizational behavior, administrative leadership, and institutional workforce planning.
+                            </p>
+                        </div>
+
+                        <!-- Degree 2 -->
+                        <div class="p-6 rounded-2xl bg-navy-950 border border-navy-700 hover:border-gold-500/40 transition-all">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="px-2.5 py-1 rounded text-[10px] font-bold uppercase bg-gold-500/20 text-gold-400">Bachelor of Science (B.Sc.)</span>
+                                <span class="text-xs text-slate-400">2015 – 2018</span>
+                            </div>
+                            <h4 class="font-serif text-lg font-bold text-slate-100">Accountancy and Finance</h4>
+                            <p class="text-xs text-slate-300 mt-1">Les Cours Sonou University, Cotonou, Benin Republic</p>
+                            <p class="text-xs text-slate-400 mt-3 leading-relaxed">
+                                Foundational training in corporate finance, administrative accounting, budget oversight, and financial management systems.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Certifications Column -->
+                    <div class="space-y-6">
+                        <h3 class="font-serif text-xl font-bold text-slate-100 flex items-center gap-2">
+                            <i class="fa-solid fa-certificate text-gold-400"></i> Professional Training & Licenses
+                        </h3>
+
+                        <!-- Cert 1 -->
+                        <div class="p-6 rounded-2xl bg-navy-950 border border-navy-700 hover:border-gold-500/40 transition-all">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="px-2.5 py-1 rounded text-[10px] font-bold uppercase bg-navy-800 text-gold-400 border border-gold-500/30">Lagos Aviation Academy</span>
+                                <span class="text-xs text-slate-400">August 15, 2025</span>
+                            </div>
+                            <h4 class="font-serif text-lg font-bold text-slate-100">Certified Travel Planner / Visa Application & Processing</h4>
+                            <p class="text-xs text-gold-400 font-medium mt-1">Includes IATA Foundation in Travel & Tourism & Amadeus GDS Training</p>
+                            <p class="text-xs text-slate-400 mt-3 leading-relaxed">
+                                Qualified in global distribution systems (Amadeus), IATA standards, international flight reservations, and immigration document compliance.
+                            </p>
+                        </div>
+
+                        <!-- Cert 2 -->
+                        <div class="p-6 rounded-2xl bg-navy-950 border border-navy-700 hover:border-gold-500/40 transition-all">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="px-2.5 py-1 rounded text-[10px] font-bold uppercase bg-navy-800 text-gold-400 border border-gold-500/30">Wunmitalks VA Academy</span>
+                                <span class="text-xs text-slate-400">September 2026</span>
+                            </div>
+                            <h4 class="font-serif text-lg font-bold text-slate-100">Certified Administrative Assistant & Customer Support Specialist</h4>
+                            <p class="text-xs text-slate-300 mt-1">Virtual Assistance & Remote Executive Operations</p>
+                            <p class="text-xs text-slate-400 mt-3 leading-relaxed">
+                                Certified in executive administrative management, CRM ticketing escalation frameworks, calendar scheduling tools, and modern support channels.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA SECTION -->
+        <section class="py-20 bg-navy-950 relative overflow-hidden">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <div class="p-10 sm:p-14 rounded-3xl bg-gradient-to-b from-navy-900 to-navy-950 border border-gold-500/30 gold-border-glow">
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-100 mb-4">
+                        Ready to Optimize Your Administrative & Operational Systems?
+                    </h2>
+                    <p class="text-slate-300 text-base sm:text-lg mb-8 max-w-2xl mx-auto">
+                        Connect directly for high-level executive assistance, higher ed administrative consulting, or custom travel itinerary planning.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <a href="contact.html" class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-gold-500 to-gold-600 text-navy-950 font-bold text-sm tracking-wide hover:brightness-110 shadow-lg shadow-gold-500/20 transition-all">
+                            Contact Atitifor Paul <i class="fa-solid fa-paper-plane ml-2"></i>
+                        </a>
+                        <a href="portfolio.html" class="w-full sm:w-auto px-8 py-4 rounded-full bg-navy-800 text-slate-200 border border-gold-500/40 hover:bg-navy-700 font-semibold text-sm transition-all">
+                            View Work Portfolio <i class="fa-solid fa-briefcase ml-2 text-gold-400"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- GLOBAL FOOTER -->
+    <footer class="bg-navy-950 border-t border-navy-800 py-12 text-slate-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                
+                <!-- Col 1: Brand Info -->
+                <div class="md:col-span-2 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded bg-gold-500 text-navy-950 font-serif font-bold flex items-center justify-center">
+                            AP
+                        </div>
+                        <span class="font-serif font-bold text-lg text-slate-100">ATITIFOR PAUL E.</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
+                        Executive Assistant | Operations Specialist | Higher Educational Administrator | Customer Support Architect | Certified Travel Planner.
+                    </p>
+                    <div class="text-xs text-slate-400 space-y-1">
+                        <p><i class="fa-solid fa-location-dot text-gold-400 mr-2"></i>Cotonou, Benin Republic</p>
+                        <p><i class="fa-solid fa-phone text-gold-400 mr-2"></i>+229 0162818570 / 0151877001</p>
+                        <p><i class="fa-solid fa-envelope text-gold-400 mr-2"></i>Directorhp4@gmail.com</p>
+                    </div>
+                </div>
+
+                <!-- Col 2: Navigation Links -->
+                <div>
+                    <h4 class="font-serif font-bold text-slate-100 text-sm mb-4">Navigation</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="index.html" class="hover:text-gold-400 transition-colors">Home Page</a></li>
+                        <li><a href="about.html" class="text-gold-400 font-medium">About & Bio</a></li>
+                        <li><a href="services.html" class="hover:text-gold-400 transition-colors">Services Offered</a></li>
+                        <li><a href="portfolio.html" class="hover:text-gold-400 transition-colors">Project Showcase</a></li>
+                        <li><a href="contact.html" class="hover:text-gold-400 transition-colors">Get in Touch</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Channels -->
+                <div>
+                    <h4 class="font-serif font-bold text-slate-100 text-sm mb-4">Professional Profiles</h4>
+                    <div class="flex gap-3">
+                        <a href="https://linkedin.com" target="_blank" class="w-9 h-9 rounded-full bg-navy-900 border border-navy-700 flex items-center justify-center text-slate-300 hover:text-gold-400 hover:border-gold-500 transition-all">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="mailto:Directorhp4@gmail.com" class="w-9 h-9 rounded-full bg-navy-900 border border-navy-700 flex items-center justify-center text-slate-300 hover:text-gold-400 hover:border-gold-500 transition-all">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                        <a href="contact.html" class="w-9 h-9 rounded-full bg-navy-900 border border-navy-700 flex items-center justify-center text-slate-300 hover:text-gold-400 hover:border-gold-500 transition-all">
+                            <i class="fa-solid fa-globe"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-8 border-t border-navy-900 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+                <p>&copy; 2026 Atitifor Paul E. All Rights Reserved.</p>
+                <a href="#top" class="hover:text-gold-400 transition-colors flex items-center gap-1">
+                    Back to Top <i class="fa-solid fa-arrow-up"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT -->
+    <script>
+        // Mobile Navigation Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if(mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        });
+
+        // Timeline Filter Functionality
+        function filterTimeline(category) {
+            const cards = document.querySelectorAll('.timeline-card');
+            const tabs = document.querySelectorAll('.timeline-tab');
+
+            // Toggle Tab Active Classes
+            tabs.forEach(tab => {
+                if(tab.getAttribute('data-category') === category) {
+                    tab.classList.remove('bg-navy-900', 'text-slate-300', 'border', 'border-navy-700');
+                    tab.classList.add('bg-gold-500', 'text-navy-950');
+                } else {
+                    tab.classList.remove('bg-gold-500', 'text-navy-950');
+                    tab.classList.add('bg-navy-900', 'text-slate-300', 'border', 'border-navy-700');
+                }
+            });
+
+            // Filter Cards
+            cards.forEach(card => {
+                if(category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio & Projects | Atitifor Paul E.</title>
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-dark: #0A192F;
+            --bg-card: #112240;
+            --bg-light: #1D2D50;
+            --accent-gold: #D4AF37;
+            --gold-light: #F4E07B;
+            --gold-gradient: linear-gradient(135deg, #D4AF37 0%, #F59E0B 100%);
+            --text-main: #F8FAFC;
+            --text-muted: #94A3B8;
+            --border-color: rgba(212, 175, 55, 0.2);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .brand-font {
+            font-family: 'Cinzel', serif;
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(10, 25, 47, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            padding: 1.2rem 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--accent-gold);
+        }
+
+        .cta-btn {
+            background: var(--gold-gradient);
+            color: var(--bg-dark);
+            padding: 0.6rem 1.4rem;
+            border-radius: 4px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .mobile-toggle {
+            display: none;
+            color: var(--accent-gold);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* --- Page Header --- */
+        .page-header {
+            padding: 10rem 2rem 4rem;
+            text-align: center;
+            background: radial-gradient(circle at center, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+        }
+
+        .page-header h1 {
+            font-size: 2.8rem;
+            color: var(--text-main);
+            margin-bottom: 1rem;
+        }
+
+        .page-header h1 span {
+            color: var(--accent-gold);
+        }
+
+        .page-header p {
+            color: var(--text-muted);
+            max-width: 650px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        /* --- Category Filter Bar --- */
+        .filter-section {
+            padding: 1rem 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .filter-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .filter-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            padding: 0.6rem 1.4rem;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--accent-gold);
+            color: var(--bg-dark);
+            border-color: var(--accent-gold);
+            font-weight: 700;
+        }
+
+        /* --- Portfolio Grid --- */
+        .portfolio-section {
+            padding: 2rem 2rem 6rem;
+        }
+
+        .portfolio-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .portfolio-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent-gold);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .card-header-icon {
+            background: rgba(212, 175, 55, 0.1);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .card-header-icon i {
+            font-size: 3rem;
+            color: var(--accent-gold);
+        }
+
+        .card-body {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card-category {
+            color: var(--accent-gold);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-title {
+            font-size: 1.35rem;
+            color: var(--text-main);
+            margin-bottom: 1rem;
+        }
+
+        .card-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .metrics-badge {
+            background: rgba(212, 175, 55, 0.08);
+            border-left: 3px solid var(--accent-gold);
+            padding: 0.6rem 1rem;
+            font-size: 0.85rem;
+            color: var(--gold-light);
+            margin-bottom: 1.5rem;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .tool-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tag {
+            background: var(--bg-light);
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .view-details-btn {
+            background: transparent;
+            border: 1px solid var(--accent-gold);
+            color: var(--accent-gold);
+            padding: 0.7rem;
+            width: 100%;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .view-details-btn:hover {
+            background: var(--gold-gradient);
+            color: var(--bg-dark);
+        }
+
+        /* --- Modal Styling --- */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 25, 47, 0.9);
+            backdrop-filter: blur(8px);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition);
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .modal-content {
+            background: var(--bg-card);
+            border: 1px solid var(--accent-gold);
+            border-radius: 8px;
+            max-width: 750px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 2.5rem;
+            position: relative;
+            transform: translateY(20px);
+            transition: var(--transition);
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: translateY(0);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .modal-close:hover {
+            color: var(--accent-gold);
+        }
+
+        .modal-title {
+            color: var(--accent-gold);
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-subtitle {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .modal-body h4 {
+            color: var(--text-main);
+            margin: 1.2rem 0 0.5rem;
+        }
+
+        .modal-body p, .modal-body ul {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .modal-body ul {
+            padding-left: 1.2rem;
+        }
+
+        .modal-body li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: #060D1A;
+            border-top: 1px solid var(--border-color);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .footer-logo {
+            font-size: 1.4rem;
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .social-links a {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .copyright {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* --- Responsive Queries --- */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                width: 75%;
+                height: calc(100vh - 70px);
+                background: var(--bg-card);
+                flex-direction: column;
+                padding: 2rem;
+                transition: var(--transition);
+                border-left: 1px solid var(--border-color);
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">ATITIFOR PAUL E.</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="contact.html" class="cta-btn">Get in Touch</a>
+            <div class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Project <span>Showcase</span></h1>
+        <p>A portfolio of operational frameworks, academic governance models, CRM architectures, and travel advisory systems built over a versatile career.</p>
+    </section>
+
+    <!-- Category Filter Controls -->
+    <section class="filter-section">
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">All Case Studies</button>
+            <button class="filter-btn" data-filter="education">Higher Education</button>
+            <button class="filter-btn" data-filter="crm">CRM & Support</button>
+            <button class="filter-btn" data-filter="travel">Travel Advisory</button>
+            <button class="filter-btn" data-filter="events">Event Logistics</button>
+        </div>
+    </section>
+
+    <!-- Portfolio Projects Grid -->
+    <section class="portfolio-section">
+        <div class="portfolio-grid">
+            
+            <!-- Project 1: Higher Education -->
+            <div class="portfolio-card" data-category="education">
+                <div class="card-header-icon">
+                    <i class="fas fa-university"></i>
+                </div>
+                <div class="card-body">
+                    <span class="card-category">Higher Education Governance</span>
+                    <h3 class="card-title">Multi-Campus Academic Operations & Welfare Architecture</h3>
+                    <p class="card-desc">Designed standard operating procedure frameworks and student welfare governance across ESCT, IMM, and ESCAE Universities during a 5+ year tenure.</p>
+                    <div class="metrics-badge">
+                        <i class="fas fa-chart-line"></i> 5+ Academic Years Managed | Multi-Institutional Liaison
+                    </div>
+                    <div class="tool-tags">
+                        <span class="tag">Academic Governance</span>
+                        <span class="tag">Policy Enforcement</span>
+                        <span class="tag">Conflict Resolution</span>
+                    </div>
+                    <button class="view-details-btn" onclick="openModal('modal1')">
+                        View Case Details <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Project 2: CRM & Support -->
+            <div class="portfolio-card" data-category="crm">
+                <div class="card-header-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <div class="card-body">
+                    <span class="card-category">Customer Success & Support</span>
+                    <h3 class="card-title">B2B SaaS Onboarding & Ticket Escalation System</h3>
+                    <p class="card-desc">Implemented custom ticketing escalation matrices, live chat workflows, and customer retention tracking using HubSpot CRM and Intercom.</p>
+                    <div class="metrics-badge">
+                        <i class="fas fa-clock"></i> 35% Response Optimization | High Retention Rate
+                    </div>
+                    <div class="tool-tags">
+                        <span class="tag">HubSpot CRM</span>
+                        <span class="tag">Intercom</span>
+                        <span class="tag">Zendesk</span>
+                        <span class="tag">Workflows</span>
+                    </div>
+                    <button class="view-details-btn" onclick="openModal('modal2')">
+                        View Case Details <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Project 3: Travel Advisory -->
+            <div class="portfolio-card" data-category="travel">
+                <div class="card-header-icon">
+                    <i class="fas fa-plane-departure"></i>
+                </div>
+                <div class="card-body">
+                    <span class="card-category">International Travel Planning</span>
+                    <h3 class="card-title">End-to-End International Itinerary & Visa Advisory Workflow</h3>
+                    <p class="card-desc">Structured comprehensive travel advisory systems, visa documentation checklists, and flight reservation frameworks aligned with IATA standards and Amadeus GDS.</p>
+                    <div class="metrics-badge">
+                        <i class="fas fa-passport"></i> 100% Documentation Compliance | IATA Guidelines
+                    </div>
+                    <div class="tool-tags">
+                        <span class="tag">Amadeus GDS</span>
+                        <span class="tag">IATA Standards</span>
+                        <span class="tag">Visa Processing</span>
+                    </div>
+                    <button class="view-details-btn" onclick="openModal('modal3')">
+                        View Case Details <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Project 4: Event Logistics -->
+            <div class="portfolio-card" data-category="events">
+                <div class="card-header-icon">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+                <div class="card-body">
+                    <span class="card-category">Event Logistics & Operations</span>
+                    <h3 class="card-title">IndabaX Benin Global AI Event Logistics Architecture</h3>
+                    <p class="card-desc">Executed operational planning, delegate registration workflows, and venue coordination for annual artificial intelligence and machine learning outreach initiatives.</p>
+                    <div class="metrics-badge">
+                        <i class="fas fa-calendar-check"></i> Annual Global Event | Logistics & Coordination
+                    </div>
+                    <div class="tool-tags">
+                        <span class="tag">Logistics Management</span>
+                        <span class="tag">Trello</span>
+                        <span class="tag">Google Workspace</span>
+                    </div>
+                    <button class="view-details-btn" onclick="openModal('modal4')">
+                        View Case Details <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Modals for Case Study Details -->
+
+    <!-- Modal 1 -->
+    <div class="modal-overlay" id="modal1">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal1')"><i class="fas fa-times"></i></button>
+            <h3 class="modal-title">Multi-Campus Academic Operations Architecture</h3>
+            <p class="modal-subtitle">ESCT, IMM, & ESCAE Universities | September 2020 – April 2026</p>
+            <div class="modal-body">
+                <h4>Executive Summary</h4>
+                <p>As Dean of Student Affairs and Operations Liaison, directed administrative governance, student engagement policies, and academic compliance protocols across university campuses in Benin Republic.</p>
+                <h4>Key Execution Highlights</h4>
+                <ul>
+                    <li>Served as Executive Liaison between university leadership, academic boards, and student representative bodies.</li>
+                    <li>Designed non-academic standard operating procedures to govern campus welfare, event logistics, and disciplinary administration.</li>
+                    <li>Synchronized management course schedules and curriculum delivery across multiple higher education institutions.</li>
+                </ul>
+                <h4>Impact Metrics</h4>
+                <p>Maintained uninterrupted academic operations across 5+ academic years while elevating institutional standards and student satisfaction.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="modal-overlay" id="modal2">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal2')"><i class="fas fa-times"></i></button>
+            <h3 class="modal-title">B2B SaaS Onboarding & Retention Framework</h3>
+            <p class="modal-subtitle">HPWIZ Properties & Freelance Advisory Services</p>
+            <div class="modal-body">
+                <h4>Executive Summary</h4>
+                <p>Designed end-to-end customer onboarding architecture and escalation protocols to maximize user retention and reduce response turnaround times for corporate clients.</p>
+                <h4>Key Execution Highlights</h4>
+                <ul>
+                    <li>Integrated HubSpot CRM pipeline tracking with Intercom live chat workflows for seamless inquiry routing.</li>
+                    <li>Constructed a tiered ticket escalation matrix for complex multi-channel inquiries across email, chat, and phone channels.</li>
+                    <li>Monitored customer health scores and created automated re-engagement email sequences.</li>
+                </ul>
+                <h4>Tools Used</h4>
+                <p>HubSpot CRM, Intercom, Zendesk, Notion, Slack</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="modal-overlay" id="modal3">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal3')"><i class="fas fa-times"></i></button>
+            <h3 class="modal-title">International Travel Advisory & Visa Compliance System</h3>
+            <p class="modal-subtitle">HPWIZ T & T LTD & Northline Immigration LTD</p>
+            <div class="modal-body">
+                <h4>Executive Summary</h4>
+                <p>Leveraging formal certifications from the Lagos Aviation Academy, established a structured itinerary planning and visa application advisory system for corporate and leisure clients across West Africa and international transit hubs.</p>
+                <h4>Key Execution Highlights</h4>
+                <ul>
+                    <li>Formulated standardized visa documentation checklists ensuring 100% compliance with international immigration standards.</li>
+                    <li>Managed group tour operations, flight bookings, and travel insurance verification using Amadeus GDS.</li>
+                    <li>Delivered personalized pre-departure briefings for clients traveling across international jurisdictions.</li>
+                </ul>
+                <h4>Certifications Applied</h4>
+                <p>Certified Travel Planner (Lagos Aviation Academy), IATA Foundation in Travel & Tourism, Amadeus GDS</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div class="modal-overlay" id="modal4">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal4')"><i class="fas fa-times"></i></button>
+            <h3 class="modal-title">IndabaX Benin Global AI Event Operations</h3>
+            <p class="modal-subtitle">Logistics Team Member & Co-Organizer | 2023 – Present</p>
+            <div class="modal-body">
+                <h4>Executive Summary</h4>
+                <p>Coordinate annual operational planning and logistics execution for IndabaX Benin Republic—an international machine learning and artificial intelligence conference bringing together researchers, educators, and industry experts.</p>
+                <h4>Key Execution Highlights</h4>
+                <ul>
+                    <li>Managed attendee registration, speaker logistics, and schedule planning for annual outreach meetings.</li>
+                    <li>Coordinated cross-functional teams using Trello and Google Workspace to ensure seamless event delivery.</li>
+                    <li>Handled venue logistics, hardware setups, and participant communication channels.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <a href="index.html" class="footer-logo">ATITIFOR PAUL E.</a>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fas fa-globe"></i></a>
+                <a href="mailto:Directorhp4@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p class="copyright">&copy; 2026 Atitifor Paul E. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interactive Handlers -->
+    <script>
+        // Mobile Navigation Drawer Toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Category Filtering Logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const portfolioCards = document.querySelectorAll('.portfolio-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+
+                portfolioCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Modal Open / Close Handlers
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking on dark backdrop
+        window.addEventListener('click', (e) => {
+            document.querySelectorAll('.modal-overlay').forEach(modal => {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
